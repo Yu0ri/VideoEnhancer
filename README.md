@@ -1,18 +1,17 @@
 # VideoEnhancer
 ![](assets/ve.png) <BR>
 
-<pre><strong>This is an easy-to-use GUI tools for the open source video enhancement methods.This tools is completely free , 
-Just for learning and communication purposes only.</strong></pre>
+<pre><strong>This is an easy-to-use GUI tools for the open source video enhancement methods.
+This tools just for learning and communication purposes only.</strong></pre>
 
 ## 1. User Interface 
-v1
-![](assets/previewer01.png) <BR>
-![](assets/previewer02.png) <BR>
-v2
-![](assets/previewer03.png) <BR>
-![](assets/previewer04.png) <BR>
-Method custom
-![](assets/previewer05.png) <BR>
+![](assets/videoenhancer.png) <BR>
+![](assets/methods.png) <BR>
+![](assets/models.png) <BR>
+![](assets/models_custom.png) <BR>
+![](assets/viewmode_1.png) <BR>
+![](assets/viewmode_2.png) <BR>
+
 ## 2. Models.
 
 #### The following models are currently supported, the pre-trained model needs to be downloaded from the official repositories.
@@ -174,7 +173,8 @@ You can find more ESRGAN models from [Model Database](https://upscale.wiki/wiki/
 1. Complete the basic UI and processing framework. 20220107
 2. Model management for hiding unused model libraries. 20220115
 3. Adjustment UI, two preview modes are now available. 20220115
-4. Optimise processing speed and remove a host of bugs. 20220115
+4. Optimise and remove a host of bugs. 20220115
+5. Uniformity of ui styles.
 
 ## 5. Todo
   
