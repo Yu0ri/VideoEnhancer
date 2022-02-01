@@ -6,43 +6,54 @@ This tools just for learning and communication purposes only.</strong></pre>
 
 ## 1. User Interface 
 ![](assets/videoenhancer.png) <BR>
-![](assets/methods.png) <BR>
-![](assets/models.png) <BR>
-![](assets/models_custom.png) <BR>
-![](assets/viewmode_1.png) <BR>
-![](assets/viewmode_2.png) <BR>
+<details><summary>View Details</summary><p>
+<img src="assets/methods.png"/> 
+<img src="assets/models.png"/> 
+<img src="assets/viewmode_1.png"/> 
+<img src="assets/viewmode_2.png"/> 
+</p></details>
+
 
 ## 2. Models.
 
 #### The following models are currently supported, the pre-trained model needs to be downloaded from the official repositories.
 
- |  Method   | Repo   |
- |  ----  | ----  |
- | A-ESRGAN |https://github.com/aesrgan/A-ESRGAN | 
- | BSRGAN | https://github.com/cszn/BSRGAN |
- | BasicVSRPP  | https://github.com/open-mmlab/mmediting/tree/master/configs/restorers/basicvsr_plusplus |
- | BebyGAN |https://github.com/dvlab-research/Simple-SR | 
- | COMISR |https://github.com/google-research/google-research/tree/master/comisr|
- | EGVSR | https://github.com/Thmen/EGVSR | 
- | ESRGAN | https://github.com/xinntao/ESRGAN |
- | esrgan-tf2 | https://github.com/peteryuX/esrgan-tf2 | 
- | IMDN |  https://github.com/Zheng222/IMDN | 
- | IconVSR | https://github.com/open-mmlab/mmediting/blob/master/configs/restorers/iconvsr/README.md | 
- | OVSR | https://github.com/psychopa4/OVSR | 
- | PPON | https://github.com/Zheng222/PPON | 
- | RSR | https://github.com/BCV-Uniandes/RSR |
- | Real-World-SR |  https://github.com/ManuelFritsche/real-world-sr | 
- | RealBasicVSR | https://github.com/ckkelvinchan/RealBasicVSR | 
+ |  Method   | Repo   | Memo |
+ |  ----  | ----  |----  |
+ | TecoGAN | https://github.com/thunil/TecoGAN | Tensorflow |
+ | COMISR |https://github.com/google-research/google-research/tree/master/comisr| . |
+ | esrgan-tf2 | https://github.com/peteryuX/esrgan-tf2 | . |
+||||
+ | DASR|https://github.com/The-Learning-And-Vision-Atelier-LAVA/DASR|SISR|
+ | BSRGAN | https://github.com/cszn/BSRGAN |  |
  | RealESRGAN | https://github.com/xinntao/Real-ESRGAN | 
- | RealSR |  https://github.com/jixiaozhong/RealSR | 
- | SPSR |  https://github.com/Maclory/SPSR | 
+ | A-ESRGAN |https://github.com/aesrgan/A-ESRGAN | RealESRGAN |
  | SwinIR | https://github.com/JingyunLiang/SwinIR |  
- | TecoGAN | https://github.com/thunil/TecoGAN | 
- | TecoGAN-PyTorch |https://github.com/skycrapers/TecoGAN-PyTorch |
- | VSR-Transformer | https://github.com/caojiezhang/VSR-Transformer | 
- | *MuCAN |https://github.com/dvlab-research/Simple-SR | 
- | |  |
- | * |  Memory Issues. |
+ | ESRGAN | https://github.com/xinntao/ESRGAN |ESRGAN|
+ | RSR | https://github.com/BCV-Uniandes/RSR |.|
+ | Real-World-SR |  https://github.com/ManuelFritsche/real-world-sr |.|
+ | RealSR |  https://github.com/jixiaozhong/RealSR |. |
+ | BebyGAN |https://github.com/dvlab-research/Simple-SR | .|
+ | ESRGANplus|https://github.com/ncarraz/ESRGANplus|. |
+ | SPSR |  https://github.com/Maclory/SPSR | 
+ | IMDN |  https://github.com/Zheng222/IMDN | |
+ | PPON | https://github.com/Zheng222/PPON | |
+ |||
+ | BasicVSRPP  | https://github.com/open-mmlab/mmediting/tree/master/configs/restorers/basicvsr_plusplus | VSR |
+ | D3Dnet|https://github.com/XinyiYing/D3Dnet|.|
+ | RealBasicVSR | https://github.com/ckkelvinchan/RealBasicVSR | . |
+ | MuCAN |https://github.com/dvlab-research/Simple-SR | . |
+ | OVSR | https://github.com/psychopa4/OVSR | . |
+ | TecoGAN-PyTorch |https://github.com/skycrapers/TecoGAN-PyTorch | . |
+ | EGVSR | https://github.com/Thmen/EGVSR | . |
+ | SOF-VSR | https://github.com/The-Learning-And-Vision-Atelier-LAVA/SOF-VSR | . |
+ |||
+ | *IconVSR | https://github.com/open-mmlab/mmediting/blob/master/configs/restorers/iconvsr/README.md | .|
+ | *VSR-Transformer | https://github.com/caojiezhang/VSR-Transformer | .|
+ | *inefficiency | |
+ ||||
+ |FastDVDnet |https://github.com/m-tassano/fastdvdnet|Video Denoise|
+ ||||
 
  <details>
 <summary><b>The ckpts directory structure</b> </summary>
@@ -70,18 +81,31 @@ This tools just for learning and communication purposes only.</strong></pre>
     |----COMISR\
     |    |----model.ckpt.data-00000-of-00001
     |    |----model.ckpt.index
+    |----D3Dnet\
+    |    |----D3Dnet.pth.tar
+    |----DASR\
+    |    |----blindsr_x2_bicubic_iso\
+    |    |    |----model\
+    |    |    |    |----model_600.pt
+    |    |----blindsr_x3_bicubic_iso\
+    |    |    |----model\
+    |    |    |    |----model_600.pt
+    |    |----blindsr_x4_bicubic_aniso\
+    |    |    |----model\
+    |    |    |    |----model_600.pt
+    |    |----blindsr_x4_bicubic_iso\
+    |    |    |----model\
+    |    |    |    |----model_600.pt
     |----EGVSR\
     |    |----EGVSR_iter420000.pth
     |----ESRGAN\
-    |    |----1x_ArtClarity.pth
-    |    |----1x_DEDITHER_32_512_126900_G.pth
-    |    |----1x_PixelSharpen_v2.pth
-    |    |----1x_Saiyajin_DeJPEG_300000_G.pth
-    |    |----1x_SSAntiAlias9x.pth
     |    |----4x-UltraSharp.pth
     |    |----esrgan_psnr_x4c64b23g32_1x16_1000k_div2k_20200420-bf5c993c.pth
     |    |----ESRGAN_SRx4_DF2KOST_official-ff704c30.pth
+    |    |----esrgan_x4c64b23g32_1x16_400k_div2k_20200508-f8ccaf3b.pth
     |    |----RRDB_ESRGAN_x4.pth
+    |----ESRGANplus\
+    |    |----nESRGANplus.pth
     |----FastDVDnet\
     |    |----model.pth
     |    |----model_clipped_noise.pth
@@ -92,9 +116,12 @@ This tools just for learning and communication purposes only.</strong></pre>
     |    |----iconvsr_vimeo90k_bd_20210414-5f38cb34.pth
     |    |----iconvsr_vimeo90k_bi_20210413-7c7418dc.pth
     |----IMDN\
+    |    |----IMDN_AS.pth
     |    |----IMDN_x2.pth
     |    |----IMDN_x3.pth
     |    |----IMDN_x4.pth
+    |    |----model_RTC.pth
+    |    |----model_RTE.pth
     |----MuCAN\
     |    |----MuCAN_REDS.pth
     |    |----MuCAN_Vimeo90K.pth
@@ -108,20 +135,43 @@ This tools just for learning and communication purposes only.</strong></pre>
     |    |----ovsr_4x.pth
     |----PPON\
     |    |----PPON_G.pth
+    |----Real-World-SR\
+    |    |----AIM2019_SDSR.pth
+    |    |----AIM2019_TDSR.pth
+    |    |----DF2K_gaussian_SDSR.pth
+    |    |----DF2K_gaussian_TDSR.pth
+    |    |----DF2K_jpeg_SDSR.pth
+    |    |----DF2K_jpeg_TDSR.pth
+    |    |----DPED_SDSR.pth
+    |    |----DPED_TDSR.pth
     |----RealBasicVSR\
     |    |----RealBasicVSR_x4.pth
     |----RealESRGAN\
     |    |----RealESRGANv2-animevideo-xsx2.pth
     |    |----RealESRGANv2-animevideo-xsx4.pth
+    |    |----RealESRGAN_x2.pth
     |    |----RealESRGAN_x2plus.pth
+    |    |----RealESRGAN_x4.pth
     |    |----RealESRGAN_x4plus.pth
     |    |----RealESRGAN_x4plus_anime_6B.pth
+    |    |----RealESRGAN_x8.pth
     |----RealSR\
     |    |----DF2K.pth
     |    |----RealSR_DPED.pth
     |    |----RealSR_JPEG.pth
     |----RSR\
     |    |----RSR.pth
+    |----SMSR_X2\
+    |    |----model\
+    |    |    |----model_1000.pt
+    |----SOF-VSR\
+    |    |----ACCV\
+    |    |    |----SOFVSR_x4.pth
+    |    |----TIP\
+    |    |    |----BD_x4.pth
+    |    |    |----BI_x2.pth
+    |    |    |----BI_x3.pth
+    |    |    |----BI_x4.pth
     |----SPSR\
     |    |----spsr.pth
     |    |----spsr_1x.pth
@@ -134,19 +184,27 @@ This tools just for learning and communication purposes only.</strong></pre>
     |    |----001_classicalSR_DF2K_s64w8_SwinIR-M_x3.pth
     |    |----001_classicalSR_DF2K_s64w8_SwinIR-M_x4.pth
     |    |----001_classicalSR_DF2K_s64w8_SwinIR-M_x8.pth
+    |    |----001_classicalSR_DIV2K_s48w8_SwinIR-M_x2.pth
+    |    |----001_classicalSR_DIV2K_s48w8_SwinIR-M_x3.pth
+    |    |----001_classicalSR_DIV2K_s48w8_SwinIR-M_x4.pth
+    |    |----001_classicalSR_DIV2K_s48w8_SwinIR-M_x8.pth
     |    |----002_lightweightSR_DIV2K_s64w8_SwinIR-S_x2.pth
     |    |----002_lightweightSR_DIV2K_s64w8_SwinIR-S_x3.pth
     |    |----002_lightweightSR_DIV2K_s64w8_SwinIR-S_x4.pth
     |    |----003_realSR_BSRGAN_DFOWMFC_s64w8_SwinIR-L_x4_GAN.pth
+    |    |----003_realSR_BSRGAN_DFOWMFC_s64w8_SwinIR-L_x4_PSNR.pth
     |    |----003_realSR_BSRGAN_DFO_s64w8_SwinIR-M_x4_GAN.pth
+    |    |----003_realSR_BSRGAN_DFO_s64w8_SwinIR-M_x4_PSNR.pth
     |    |----005_colorDN_DFWB_s128w8_SwinIR-M_noise15.pth
     |    |----005_colorDN_DFWB_s128w8_SwinIR-M_noise25.pth
     |    |----005_colorDN_DFWB_s128w8_SwinIR-M_noise50.pth
     |----TecoGAN\
-    |    |----TG-2X-TEST.data-00000-of-00001
-    |    |----TG-2X-TEST.index
-    |    |----TG-4X.data-00000-of-00001
-    |    |----TG-4X.index
+    |    |----TECOGAN-2X-TEST.data-00000-of-00001
+    |    |----TECOGAN-2X-TEST.index
+    |    |----TECOGAN-2X-TEST.meta
+    |    |----TECOGAN-4X.data-00000-of-00001
+    |    |----TECOGAN-4X.index
+    |    |----TECOGAN-4X.meta
     |----TecoGAN-PyTorch\
     |    |----FRVSR_BD_iter400000.pth
     |    |----FRVSR_BI_iter400000.pth
@@ -156,6 +214,16 @@ This tools just for learning and communication purposes only.</strong></pre>
     |    |----TecoGAN_4x_BI_Vimeo_iter500K.pth
     |    |----TecoGAN_BD_iter500000.pth
     |    |----TecoGAN_BI_iter500000.pth
+    |----TrtEngine\
+    |    |----BSRGAN_BSRGAN_360x360.trt
+    |    |----real-esrgan_4xplus_360x360.trt
+    |----TrtModule\
+    |    |----BSRGAN_BSRGANx2_trt.pth
+    |    |----BSRGAN_trt.pth
+    |    |----ESRGAN_4x-UltraSharp_trt.pth
+    |    |----RealESRGAN_RealESRGAN_x2plus_trt.pth
+    |    |----RealESRGAN_RealESRGAN_x4plus_trt.pth
+    |    |----RealESRGAN_RealESRGAN_x8_trt.pth
     |----vsrTransformer\
     |    |----vsrTransformer_reds_x4_final.pth
 </pre>
@@ -165,20 +233,23 @@ You can find more ESRGAN models from [Model Database](https://upscale.wiki/wiki/
 
 ## 3. Running Environment.
 
-1. The runtime environment is cuda11.1 cudnn8.1.1, Please install and configure it.
+1. The runtime environment is cuda11.4 cudnn8.2.2, Please install and configure it.
 2. [LAVFilters-0.75-x64](https://github.com/Nevcairiel/LAVFilters/releases).
 3. FFMPEG support is required, copy ffmpeg.exe to the ffmpeg folder.
+4. TRTEngine need TensorRT 8.2 GA.
 
 ## 4. Changelogs
-1. Complete the basic UI and processing framework. 20220107
-2. Model management for hiding unused model libraries. 20220115
-3. Adjustment UI, two preview modes are now available. 20220115
-4. Optimise and remove a host of bugs. 20220115
-5. Uniformity of ui styles.
+1. Complete the basic UI and processing framework. 
+2. Model management for hiding unused model libraries. 
+3. Adjustment UI, two preview modes are now available. 
+4. Optimise and remove a host of bugs. 
+5. Uniformity Styles. 
+6. TRTEngine Support. 
 
 ## 5. Todo
   
 ## 6. Note
-1. The execution is less efficient than the command line interface because of the GUI and the prevention of memory overflows.<br>
-2. Thanks to all the open source authors this program references, if it is detrimental to your rights, <br>
+1. Thanks to all the open source authors this program references, if it is detrimental to your rights, <br>
 please let me know and I will remove it as soon as possible.
+
+2. The efficient is less than CLI , because of the GUI and the prevention of memory overflows.<br>
