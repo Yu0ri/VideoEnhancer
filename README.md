@@ -226,7 +226,7 @@ This tools just for learning and communication purposes only.</strong></pre>
 You can find more ESRGAN models from [Model Database](https://upscale.wiki/wiki/Model_Database).
 ## 5. Update
 1. VideoEnhancer Previewer v0.2.06 (2,432 MB)<br>
-https://workupload.com/file/9jchpakjqNV<br>
+https://workupload.com/file/9jchpakjqNV passwd:km <br>
 <pre>
  Changelogs:
     1. Complete the basic UI and processing framework. 
