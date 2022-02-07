@@ -241,3 +241,5 @@ https://workupload.com/file/9jchpakjqNV passwd:km <br>
 please let me know and I will remove it as soon as possible.
 
 2. The efficient is less than CLI , because of the GUI and the prevention of memory overflows.<br>
+
+![visitor badge](https://visitor-badge.glitch.me/badge?page_id=github.com/km2ii/VideoEnhancer)
