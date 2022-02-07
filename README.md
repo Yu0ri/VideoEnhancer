@@ -225,15 +225,17 @@ This tools just for learning and communication purposes only.</strong></pre>
 
 You can find more ESRGAN models from [Model Database](https://upscale.wiki/wiki/Model_Database).
 ## 5. Update
-1. VideoEnhancer Previewer v0.2.06 (2,432 MB)
-  https://workupload.com/file/9jchpakjqNV
-  Changelogs:
+1. VideoEnhancer Previewer v0.2.06 (2,432 MB)<br>
+https://workupload.com/file/9jchpakjqNV<br>
+<pre>
+ Changelogs:
     1. Complete the basic UI and processing framework. 
     2. Model management for hiding unused model libraries. 
     3. Adjustment UI, two preview modes are now available. 
     4. Optimise and remove a host of bugs. 
     5. Uniformity Styles. 
     6. TRTEngine Support. 
+</pre>
 ## 6. Note
 1. Thanks to all the open source authors this program references, if it is detrimental to your rights, 
 please let me know and I will remove it as soon as possible.
