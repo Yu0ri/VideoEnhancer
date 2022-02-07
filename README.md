@@ -6,15 +6,25 @@ This tools just for learning and communication purposes only.</strong></pre>
 
 ## 1. User Interface 
 ![](assets/videoenhancer.png) <BR>
-<details><summary>View Details</summary><p>
-<img src="assets/methods.png"/> 
-<img src="assets/models.png"/> 
-<img src="assets/viewmode_1.png"/> 
-<img src="assets/viewmode_2.png"/> 
-</p></details>
+![](assets/methods.png) <BR>
+![](assets/models.png) <BR>
+![](assets/viewmode_1.png) <BR>
+![](assets/viewmode_2.png) <BR>
 
+## 2. Running Environment.
 
-## 2. Models.
+1. The runtime environment is cuda11.4 cudnn8.2.2, Please install and configure it.
+2. [LAVFilters-0.75-x64](https://github.com/Nevcairiel/LAVFilters/releases) needs to be installed, please download from https://github.com/Nevcairiel/LAVFilters/releases.
+3. To run the TRTEngine (.trt) and torch2trt (.pth) models, TensorRT 8.2.2.1 or higher is required. Because of trt model's device dependency, it needs to be converted by itself.
+4. See the list of supported models, please refer to ckpts directory structure and download the pre-traind model to the corresponding directory by yourself.
+5. Some additional features of the preview version have not been implemented yet, lack of testing and optimization, there may be a lot of bugs.
+
+## 3. Quick start
+1. Open the video file, set the processing range, select the method and model to perform the conversion.
+2. Flexibly use the model customization function to block the list of uncommon models.
+3. More model support and features are in the process of implementation.
+
+## 4. Models.
 
 #### The following models are currently supported, the pre-trained model needs to be downloaded from the official repositories.
 
@@ -22,7 +32,6 @@ This tools just for learning and communication purposes only.</strong></pre>
  |  ----  | ----  |----  |
  | TecoGAN | https://github.com/thunil/TecoGAN | Tensorflow |
  | COMISR |https://github.com/google-research/google-research/tree/master/comisr| . |
- | esrgan-tf2 | https://github.com/peteryuX/esrgan-tf2 | . |
 ||||
  | DASR|https://github.com/The-Learning-And-Vision-Atelier-LAVA/DASR|SISR|
  | BSRGAN | https://github.com/cszn/BSRGAN |  |
@@ -41,16 +50,15 @@ This tools just for learning and communication purposes only.</strong></pre>
  |||
  | BasicVSRPP  | https://github.com/open-mmlab/mmediting/tree/master/configs/restorers/basicvsr_plusplus | VSR |
  | D3Dnet|https://github.com/XinyiYing/D3Dnet|.|
+ | IconVSR | https://github.com/open-mmlab/mmediting/blob/master/configs/restorers/iconvsr/README.md | .|
  | RealBasicVSR | https://github.com/ckkelvinchan/RealBasicVSR | . |
- | MuCAN |https://github.com/dvlab-research/Simple-SR | . |
  | OVSR | https://github.com/psychopa4/OVSR | . |
  | TecoGAN-PyTorch |https://github.com/skycrapers/TecoGAN-PyTorch | . |
  | EGVSR | https://github.com/Thmen/EGVSR | . |
  | SOF-VSR | https://github.com/The-Learning-And-Vision-Atelier-LAVA/SOF-VSR | . |
  |||
- | *IconVSR | https://github.com/open-mmlab/mmediting/blob/master/configs/restorers/iconvsr/README.md | .|
- | *VSR-Transformer | https://github.com/caojiezhang/VSR-Transformer | .|
- | *inefficiency | |
+ | *MuCAN |https://github.com/dvlab-research/Simple-SR | *inefficiency |
+ | *VSR-Transformer | https://github.com/caojiezhang/VSR-Transformer | *|
  ||||
  |FastDVDnet |https://github.com/m-tassano/fastdvdnet|Video Denoise|
  ||||
@@ -59,7 +67,7 @@ This tools just for learning and communication purposes only.</strong></pre>
 <summary><b>The ckpts directory structure</b> </summary>
 <b>Note:</b> Copy to the appropriate directory, otherwise it will not work properly.<br>
   <pre>
-----ckpts\
+----ckpts\ 
     |----A-ESRGAN\
     |    |----A_ESRGAN_Multi.pth
     |    |----A_ESRGAN_Multi_Plus.pth
@@ -77,7 +85,6 @@ This tools just for learning and communication purposes only.</strong></pre>
     |----BSRGAN\
     |    |----BSRGAN.pth
     |    |----BSRGANx2.pth
-    |    |----BSRNet.pth
     |----COMISR\
     |    |----model.ckpt.data-00000-of-00001
     |    |----model.ckpt.index
@@ -100,7 +107,6 @@ This tools just for learning and communication purposes only.</strong></pre>
     |    |----EGVSR_iter420000.pth
     |----ESRGAN\
     |    |----4x-UltraSharp.pth
-    |    |----esrgan_psnr_x4c64b23g32_1x16_1000k_div2k_20200420-bf5c993c.pth
     |    |----ESRGAN_SRx4_DF2KOST_official-ff704c30.pth
     |    |----esrgan_x4c64b23g32_1x16_400k_div2k_20200508-f8ccaf3b.pth
     |    |----RRDB_ESRGAN_x4.pth
@@ -110,8 +116,6 @@ This tools just for learning and communication purposes only.</strong></pre>
     |    |----model.pth
     |    |----model_clipped_noise.pth
     |----IconVSR\
-    |    |----edvrm_reds_20210413-3867262f.pth
-    |    |----edvrm_vimeo90k_20210413-e40e99a8.pth
     |    |----iconvsr_reds4_20210413-9e09d621.pth
     |    |----iconvsr_vimeo90k_bd_20210414-5f38cb34.pth
     |    |----iconvsr_vimeo90k_bi_20210413-7c7418dc.pth
@@ -120,8 +124,6 @@ This tools just for learning and communication purposes only.</strong></pre>
     |    |----IMDN_x2.pth
     |    |----IMDN_x3.pth
     |    |----IMDN_x4.pth
-    |    |----model_RTC.pth
-    |    |----model_RTE.pth
     |----MuCAN\
     |    |----MuCAN_REDS.pth
     |    |----MuCAN_Vimeo90K.pth
@@ -132,7 +134,6 @@ This tools just for learning and communication purposes only.</strong></pre>
     |    |----lovsr_4+2_56.pth
     |    |----lovsr_8+4_56.pth
     |    |----lovsr_8+4_80.pth
-    |    |----ovsr_4x.pth
     |----PPON\
     |    |----PPON_G.pth
     |----Real-World-SR\
@@ -161,9 +162,6 @@ This tools just for learning and communication purposes only.</strong></pre>
     |    |----RealSR_JPEG.pth
     |----RSR\
     |    |----RSR.pth
-    |----SMSR_X2\
-    |    |----model\
-    |    |    |----model_1000.pt
     |----SOF-VSR\
     |    |----ACCV\
     |    |    |----SOFVSR_x4.pth
@@ -199,12 +197,8 @@ This tools just for learning and communication purposes only.</strong></pre>
     |    |----005_colorDN_DFWB_s128w8_SwinIR-M_noise25.pth
     |    |----005_colorDN_DFWB_s128w8_SwinIR-M_noise50.pth
     |----TecoGAN\
-    |    |----TECOGAN-2X-TEST.data-00000-of-00001
-    |    |----TECOGAN-2X-TEST.index
-    |    |----TECOGAN-2X-TEST.meta
-    |    |----TECOGAN-4X.data-00000-of-00001
-    |    |----TECOGAN-4X.index
-    |    |----TECOGAN-4X.meta
+    |    |----TECOGAN.data-00000-of-00001
+    |    |----TECOGAN.index
     |----TecoGAN-PyTorch\
     |    |----FRVSR_BD_iter400000.pth
     |    |----FRVSR_BI_iter400000.pth
@@ -230,26 +224,18 @@ This tools just for learning and communication purposes only.</strong></pre>
 </details>
 
 You can find more ESRGAN models from [Model Database](https://upscale.wiki/wiki/Model_Database).
-
-## 3. Running Environment.
-
-1. The runtime environment is cuda11.4 cudnn8.2.2, Please install and configure it.
-2. [LAVFilters-0.75-x64](https://github.com/Nevcairiel/LAVFilters/releases).
-3. FFMPEG support is required, copy ffmpeg.exe to the ffmpeg folder.
-4. TRTEngine need TensorRT 8.2 GA.
-
-## 4. Changelogs
-1. Complete the basic UI and processing framework. 
-2. Model management for hiding unused model libraries. 
-3. Adjustment UI, two preview modes are now available. 
-4. Optimise and remove a host of bugs. 
-5. Uniformity Styles. 
-6. TRTEngine Support. 
-
-## 5. Todo
-  
+## 5. Update
+1. VideoEnhancer Previewer v0.2.06 (2,432 MB)
+  https://workupload.com/file/9jchpakjqNV
+  Changelogs:
+    1. Complete the basic UI and processing framework. 
+    2. Model management for hiding unused model libraries. 
+    3. Adjustment UI, two preview modes are now available. 
+    4. Optimise and remove a host of bugs. 
+    5. Uniformity Styles. 
+    6. TRTEngine Support. 
 ## 6. Note
-1. Thanks to all the open source authors this program references, if it is detrimental to your rights, <br>
+1. Thanks to all the open source authors this program references, if it is detrimental to your rights, 
 please let me know and I will remove it as soon as possible.
 
 2. The efficient is less than CLI , because of the GUI and the prevention of memory overflows.<br>
