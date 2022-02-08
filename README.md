@@ -33,8 +33,7 @@ This tools just for learning and communication purposes only.</strong></pre>
  | TecoGAN | https://github.com/thunil/TecoGAN | Tensorflow |
  | COMISR |https://github.com/google-research/google-research/tree/master/comisr| . |
 ||||
- | DASR|https://github.com/The-Learning-And-Vision-Atelier-LAVA/DASR|SISR|
- | BSRGAN | https://github.com/cszn/BSRGAN |  |
+ | BSRGAN | https://github.com/cszn/BSRGAN |SISR|
  | RealESRGAN | https://github.com/xinntao/Real-ESRGAN | 
  | A-ESRGAN |https://github.com/aesrgan/A-ESRGAN | RealESRGAN |
  | SwinIR | https://github.com/JingyunLiang/SwinIR |  
@@ -90,19 +89,6 @@ This tools just for learning and communication purposes only.</strong></pre>
     |    |----model.ckpt.index
     |----D3Dnet\
     |    |----D3Dnet.pth.tar
-    |----DASR\
-    |    |----blindsr_x2_bicubic_iso\
-    |    |    |----model\
-    |    |    |    |----model_600.pt
-    |    |----blindsr_x3_bicubic_iso\
-    |    |    |----model\
-    |    |    |    |----model_600.pt
-    |    |----blindsr_x4_bicubic_aniso\
-    |    |    |----model\
-    |    |    |    |----model_600.pt
-    |    |----blindsr_x4_bicubic_iso\
-    |    |    |----model\
-    |    |    |    |----model_600.pt
     |----EGVSR\
     |    |----EGVSR_iter420000.pth
     |----ESRGAN\
